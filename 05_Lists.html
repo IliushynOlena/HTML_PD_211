@@ -4,8 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lists</title>
+    <style>
+    h2{
+        font-size: large;
+    }
+    .custom-ul-style{
+        list-style-type:disc;
+        list-style-position: inside;
+        /* padding: 10px; */
+        padding-left: 15px;
+        list-style-image: url(./markers/leaf.png);
+    }
+    ol{
+        list-style-type:upper-roman;
+    }
+    ol>li{
+        color: red;
+    }
+    ol li::marker{
+        color: aqua;
+        font-weight: bold;
+    }
+    dt{
+        font-weight: bold;
+        color: rgb(15, 187, 15);
+    }
+    dd{
+        color: rgb(55, 86, 55);
+        margin-top: 10px;
+        margin-bottom: 10px;
+      
+    }
+    /* .custom-ol-style {
+        list-style-type: none;
+        counter-reset: number;
+    }
+    .custom-ol-style>li::before {
+        content: counter(number) ')';
+        counter-increment: number;
+    } */
+    .custom-ol-style {
+        list-style-type: none;
+        font-style: italic;
+    }
+    .custom-ol-style>li::before {
+        content: ' - ';
+        color: rgb(66, 20, 20);
+    }
+
+    .custom-ol-style ul li {
+        list-style-type: decimal;
+        color: black;
+    }
+
+
+
+    </style>
 </head>
 <body>
-    
+   
+    <h2>MultiLevel Lists</h2>
+    <ol class="custom-ol-style">
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing 
+            elit. Voluptas, placeat.
+            <ul>
+                <li>Lorem, ipsum dolor.</li>
+                <li>Possimus, excepturi explicabo.</li>
+                <li>Commodi, quae aut.</li>
+            </ul>        
+        </li>
+          
+        <li>Nemo nisi reprehenderit quisquam culpa, ipsa 
+            iusto maxime aperiam quam?
+            <ul>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Id asperiores officia reiciendis.</li>
+                <li>Eius consectetur deleniti quisquam.</li>
+                <li>Vel, voluptatibus! Odit, eos?</li>
+            </ul>
+        </li>
+        <li>Minus, dolor? Neque porro itaque ipsam quasi 
+            accusantium, doloribus nam.</li>
+        <li>Sunt quod perferendis dignissimos ab laboriosam 
+            hic, tenetur repudiandae cupiditate!</li>
+        <li>Aperiam, deleniti officiis? Modi adipisci 
+            suscipit cum eum dolor in!</li>
+    </ol>
+
+
+    <h2>Custom style</h2>
+    <ul class="custom-ul-style">
+        <li>Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+        <li>Fuga quasi deserunt evenietFuga quasi deserunt evenietFuga quasi deserunt eveniet eos aut earum?</li>
+        <li>Impedit quasi incidunt vitae maiores id et!</li>
+        <li>Earum, ipsam exercitationem aspernatur autem alias optio.</li>
+    </ul>
+    <h2>Default style</h2>
+    <h2>Unordered List</h2>    
+    <ul>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Ratione numquam nemo rerum provident!</li>
+        <li>Quia molestiae deleniti soluta facilis?</li>
+        <li>Minima, obcaecati accusamus! Ullam, adipisci?</li>
+        <li>Voluptatibus vel sint distinctio voluptate.</li>
+    </ul>
+    <h2>Ordered List</h2>
+    <ol start="10" reversed>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Reiciendis, culpa tempora? Repellat, adipisci.</li>
+        <li>Aperiam esse dolor sint hic?</li>
+        <li>Exercitationem vero cupiditate doloremque nobis.</li>
+        <li>Cumque odio ipsa ducimus veniam!</li>
+        <li value="25">Cumque odio ipsa ducimus veniam!</li>
+        <li>Cumque odio ipsa ducimus veniam!</li>
+        <li>Cumque odio ipsa ducimus veniam!</li>
+        <li>Cumque odio ipsa ducimus veniam!</li>
+        <li>Cumque odio ipsa ducimus veniam!</li>
+    </ol>
+
+    <h2>Definition List</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>HTML is a standardized document markup language for viewing web pages in a browser. Browsers receive an HTML document from the server using HTTP/HTTPS protocols or open it from a local disk, then interpret the code into an interface that will be displayed on the monitor screen. </dd>
+        <dt>CSS</dt>
+        <dd>CSS is a special style language used to describe the appearance of pages. The pages themselves are written in data markup languages. CSS is the core technology of the World Wide Web, along with HTML and JavaScript.</dd>
+    </dl>    
+
+
 </body>
 </html>
