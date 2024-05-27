@@ -3,271 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table</title>
+    <title>Animation</title>
     <style>
         body{
-            font-family:Arial, Helvetica, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
         }
-        table{
-            border-collapse:collapse;
+        nav ul{
+            list-style: none;
+            
         }
-        
-        th{
-            color:white;
-            padding: 10px;
+        nav ul li{
+            display: inline-block;
         }
-        tbody tr{
-            font-size: 11px;
+        div hr{
+            width: 190px;
+            height: 4px;
+            background-color: rgb(197, 15, 85);
+            border-style: none;
         }
-        
-
-        th:nth-child(1)
-        {
-            background-color:rgb(121,135,170);
-            border-top-left-radius: 7px;
+        div button{
+            
+            width: 80px;
+            height: 33px;
+            color: white;
+            background-color: rgb(210, 15, 90);
+            border-radius: 5px;
+            border-style: none;
+            margin-top:12px;
         }
-        th:nth-child(2)
-        {
-            background-color:rgb(79,98,141);
-        }
-        th:nth-child(3)
-        {
-            background-color:rgb(47,65,115);
-        }
-        th:nth-child(4)
-        {
-            background-color:rgb(22,41,84);
-        }
-        th:nth-child(5)
-        {
-            background-color:rgb(7,21,56);
-            border-top-right-radius: 7px;
-        }
-        th span{
-            font-size: 20px;
-        }
-        
-        tbody tr:nth-child(1) td:nth-child(2n)
-        {
-            background-color:rgb(231,231,231);
-            padding: 7px;
+        div{
             text-align: center;
+            width: 190px;
+            height: 315px;
+            margin:15px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
         }
-        tbody tr:nth-child(1) td:nth-child(odd)
-        {
-            background-color:rgb(219,219,219);
-            padding: 7px;
-            text-align: center;
+        div h2{
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 2px;
+            display: inline-block;
         }
-
-        tbody tr:nth-child(2) td:nth-child(2n)
-        {
-            background-color:white;
-            padding: 7px;
-            text-align: center;
+        div h1{
+            font-size: 35px;
+            margin-top: 6%;
+            margin-bottom: 0px;
         }
-        tbody tr:nth-child(2) td:nth-child(odd)
-        {
-            background-color:rgb(231,231,231);
-            padding: 7px;
-            text-align: center;
+        div h3{
+            margin-top: 2px;
+            margin-bottom:20px;
+            color: rgb(208, 208, 208);
+        }
+        div p{
+            font-weight:bold;
+            font-size: 13px;
+            margin-top: 0px;
+            margin-bottom: 12px;
+            padding-right: 10px;
+            padding-left:10px;
         }
 
-        tbody tr:nth-child(3) td:nth-child(2n)
-        {
-            background-color:rgb(231,231,231);
-            padding: 7px;
-            text-align: center;
+        .orange_color hr{
+            background-color: rgb(236, 148, 6);
         }
-        tbody tr:nth-child(3) td:nth-child(odd)
-        {
-            background-color:rgb(219,219,219);
-            padding: 7px;
-            text-align: center;
+        .orange_color button{
+            background-color: rgb(236, 148, 6);
         }
 
-        tbody tr:nth-child(4) td:nth-child(2n)
-        {
-            background-color:white;
-            padding: 7px;
-            text-align: center;
+        .blue_color hr{
+            background-color: rgb(76, 100, 166);
         }
-        tbody tr:nth-child(4) td:nth-child(odd)
-        {
-            background-color:rgb(231,231,231);
-            padding: 7px;
-            text-align: center;
+        .blue_color button{
+            background-color: rgb(72, 94, 156);
         }
 
-        tbody tr:nth-child(5) td:nth-child(2n)
-        {
-            background-color:rgb(231,231,231);
-            padding: 7px;
-            text-align: center;
+        .green_color hr{
+            background-color: rgb(63, 159, 95);
         }
-        tbody tr:nth-child(5) td:nth-child(odd)
-        {
-            background-color:rgb(219,219,219);
-            padding: 7px;
-            text-align: center;
+        .green_color button{
+            background-color: rgb(63, 159, 95);
         }
 
-        tbody tr:nth-child(6) td:nth-child(2n)
-        {
-            background-color:white;
-            padding: 7px;
-            text-align: center;
+        div{
+            transition: 1s;
         }
-        tbody tr:nth-child(6) td:nth-child(odd)
-        {
-            background-color:rgb(231,231,231);
-            padding: 7px;
-            text-align: center;
-        }
-
-        tfoot tr:nth-child(1) td:nth-child(2n)
-        {
-            background-color:rgb(231,231,231);
-            padding: 7px;
-            text-align: center;
-        }
-        tfoot tr:nth-child(1) td:nth-child(odd)
-        {
-            background-color:rgb(219,219,219);
-            padding: 7px;
-            text-align: center;
-        }
-        .border-left{
-            border-bottom-left-radius: 7px;
-        }
-        .border-right{
-            border-bottom-right-radius: 7px;
-        }
-        tbody tr:nth-child(1) td:nth-child(1)
-        {
-            padding-left: 15px;
-            text-align: left;
-            font-size: 10px;
-        }
-        tbody tr:nth-child(2) td:nth-child(1)
-        {
-            padding-left: 15px;
-            text-align: left;
-            font-size: 10px;
-        }
-        tbody tr:nth-child(3) td:nth-child(1)
-        {
-            padding-left: 15px;
-            text-align: left;
-            font-size: 10px;
-        }
-        tbody tr:nth-child(4) td:nth-child(1)
-        {
-            padding-left: 15px;
-            text-align: left;
-            font-size: 10px;
-        }
-        tbody tr:nth-child(5) td:nth-child(1)
-        {
-            padding-left: 15px;
-            text-align: left;
-            font-size: 10px;
-        }
-        tbody tr:nth-child(6) td:nth-child(1)
-        {
-            padding-left: 15px;
-            padding-right: 24px;
-            text-align: left;
-            font-size: 10px;
-        }
-        tfoot tr:nth-child(1) td:nth-child(2)
-        {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-        .button{
-            border-radius: 0px;
-            border-color: rgb(181, 181, 181);
-            border-style:solid;
-            height: 25px;
-            width: 65px;
-            background-color: rgb(211,211,211);
-            font-size: 10px;
-            color:rgb(113,115,117);
-            font-family:sans-serif
+        div:hover{
+            transform:scale(1.15)
         }
     </style>
 </head>
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th>Choose your plan</th>
-                <th>starter<br><br>
-                    <span>$10</span><br>per month
-                </th>
-                <th>econom<br><br>
-                <span>$30</span><br>per month
-                </th>
-                <th>standart<br><br>
-                <span>$59</span><br>per month</th>
-                <th>proffesional<br><br>
-                <span>$99</span><br>per month</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Amount of space</td>
-                <td>20GB</td>
-                <td>40GB</td>
-                <td>110GB</td>
-                <td>Unlimited</td>
-            </tr>
-            <tr>
-                <td>Bandwidth per month</td>
-                <td>120GB</td>
-                <td>240GB</td>
-                <td>610GB</td>
-                <td>1300GB</td>
-            </tr>
-            <tr>
-                <td>Email accounts</td>
-                <td>1</td>
-                <td>15</td>
-                <td>60</td>
-                <td>Unlimited</td>
-            </tr>
-            <tr>
-                <td>MySQL databases</td>
-                <td>1</td>
-                <td>15</td>
-                <td>60</td>
-                <td>Unlimited</td>
-            </tr>
-            <tr>
-                <td>25h support</td>
-                <td>No</td>
-                <td>Yes</td>
-                <td>Yes</td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td>Support tickets per month</td>
-                <td>2</td>
-                <td>6</td>
-                <td>14</td>
-                <td>20</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td class="border-left"></td>
-                <td><button class="button">START</button></td>
-                <td><button class="button">START</button></td>
-                <td><button class="button">START</button></td>
-                <td class="border-right"><button class="button">START</button></td>
-            </tr>
-        </tfoot>
-    </table>
+    <nav>
+        <ul>
+            <li>
+                <div>
+                    <h2>ENTERPISE</h2><hr>
+                    <h1>$69</h1>
+                    <h3>per month</h3>
+        
+                    <p>10GB disk space</p>
+                    <p>100GB monthly bandwich</p>
+                    <p>20 email accounts</p>
+                    <p>Unlimited subdomens</p>
+                    <button>BUY</button>
+                </div>
+            </li>
+            <li>
+                <div class="orange_color">
+                    <h2>PROFESSIONAL</h2><hr>
+                    <h1>$29</h1>
+                    <h3>per month</h3>
+        
+                    <p>5GB disk space</p>
+                    <p>60GB monthly bandwich</p>
+                    <p>10 email accounts</p>
+                    <p>Unlimited subdomens</p>
+                    <button>BUY</button>
+                </div>
+            </li>
+            <li>
+                <div class="blue_color">
+                    <h2>STANDART</h2><hr>
+                    <h1>$19</h1>
+                    <h3>per month</h3>
+        
+                    <p>3GB disk space</p>
+                    <p>30GB monthly bandwich</p>
+                    <p>5 email accounts</p>
+                    <p>Unlimited subdomens</p>
+                    <button>BUY</button>
+                </div>
+            </li>
+            <li>
+                <div class="green_color">
+                    <h2>BASIC</h2><hr>
+                    <h1>$9</h1>
+                    <h3>per month</h3>
+        
+                    <p>1GB disk space</p>
+                    <p>10GB monthly bandwich</p>
+                    <p>2 email accounts</p>
+                    <p>Unlimited subdomens</p>
+                    <button>BUY</button>
+                </div>
+            </li>
+        </ul>
+    </nav>
 </body>
 </html>
